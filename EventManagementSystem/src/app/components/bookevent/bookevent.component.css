@@ -1,0 +1,41 @@
+.mainform
+{
+    position: absolute;
+    top: 10%;
+    left: 30%;
+    border: 1px solid rgb(0, 140, 255);
+    border-radius: 15px;
+}
+
+h1{
+    text-align: center;
+    margin: 10px;
+}
+
+form
+{
+    margin: 50px;
+}
+input
+{
+    width: 350px;
+    height: 30px;
+    border: 1px solid #000;
+    margin-bottom: 15px;
+}
+
+.seperate
+{
+    margin: 10px;
+    width: 350px;
+    display: block;
+}
+
+button
+{
+    background-color: green;
+    color: #fff;
+    width: 75px;
+    height: 35px;
+    margin-left: 40%;
+}

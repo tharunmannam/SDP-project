@@ -1,0 +1,33 @@
+.contact
+{
+    margin: 0;
+    padding: 0;
+}
+.leftview
+{
+    width: 40%;
+    margin-top: 3%;
+    margin-left: 5%;
+    float: left;
+}
+
+.rightview
+{
+    width: 50%;
+    float: right;
+    margin-top: 3%;
+}
+
+input
+{
+    width: 80%;
+    height: 30px;
+    display: inline-block;
+    margin-bottom: 15px;
+}
+
+.submitbutton
+{
+    background-color: green;
+    color: #fff;
+}

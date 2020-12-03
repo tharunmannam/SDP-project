@@ -1,0 +1,54 @@
+<div class="container">
+    <div class="top">
+        <div style="text-align: center;margin-top: 15px;margin-bottom: 15px;width: 75%;">
+            <i class="fa fa-search" aria-hidden="true"></i>
+            <input type="text" style="width: 50%; height: 30px;" [(ngModel)]="data">
+            <button mat-button class="but" (click)="Search()">Search</button>
+            <button mat-button class="but" (click)="Getall()" style="margin-left: 10px;">Get All</button>
+        </div>
+    </div>
+
+    <div *ngIf="!err" class="displayclass">
+        <mat-card *ngFor="let detail of details">
+            <div class="view" style="margin-right: 200px;">
+                <h1>Username :  {{detail.username}} </h1>
+            </div>
+            <div class="view" style="margin-right: 200px;">
+                <h1>mobile number:  {{detail.mobile}} </h1>
+            </div>
+            <div class="view" >
+                <h1>EventType:   {{detail.Event_Type}}</h1>
+            </div>
+            <br>
+            <div class="view" style="margin-right: 220px;">
+                <h1>EventPlace:   {{detail.Event_Place}} </h1>
+            </div>
+            <div class="view" style="margin-right: 200px;">
+                <h1>Event Date :  {{detail.Event_Date}} </h1>
+            </div>
+            <div class="view">
+                <h1>Equipment:  {{detail.Equipment}} </h1>
+            </div>
+            <br>
+            <div class="view" style="margin-right: 270px;">
+                <h1>Food:  {{detail.Food}} </h1>
+            </div>
+            <div class="view" style="margin-right: 260px;">
+                <h1>No of Guests:  {{detail.No_of_Guests}} </h1>
+            </div>
+            <div class="view">
+                <h1>Seats:  {{detail.Seats}} </h1>
+            </div>
+            <br>
+            <div class="view" style="margin-right: 200px;">
+                <h1>Food Type:  {{detail.Food_type}} </h1>
+            </div>
+            <div>
+                <button mat-button color="warn" (click)="Remove(detail)">Cancel Event</button>
+            </div>
+        </mat-card>
+    </div>
+    <div *ngIf="err">
+        <h1 style="font-size: 30px; text-align: center; margin-top: 50px;">List was Empty</h1>
+    </div>
+</div>

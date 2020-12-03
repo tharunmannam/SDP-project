@@ -1,0 +1,36 @@
+.container
+{
+    position: absolute;
+    left: 10%;
+    top: 7%;
+    width: 75%;
+    font-family: sans-serif;
+}
+
+mat-card
+{
+    margin-bottom: 50px;
+}
+
+.but
+{
+    margin-top: 15px;
+    background-color: green;
+    color: #fff;
+}
+
+.top
+{
+    margin-bottom: 50px;
+}
+
+.displayclass
+{
+    margin-left: 150px;
+    margin-top: 25px;
+}
+
+.view
+{
+    display: inline-flex;
+}

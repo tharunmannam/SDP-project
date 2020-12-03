@@ -1,0 +1,15 @@
+<div>
+    <div>
+        <input matInput type="text" placeholder="Card number">
+    </div>
+    <div>
+        <input type="cvv" placeholder="Cvv">
+    </div>
+    <div>
+        expirydate : <br>
+        <input type="date">
+    </div>
+    price:  {{data.price}} <br>
+    <button mat-button [mat-dialog-close]="yes">Confirm</button>
+    <button mat-button [mat-dialog-close]="no">Cancel</button>
+</div>

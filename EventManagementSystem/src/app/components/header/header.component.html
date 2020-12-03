@@ -1,0 +1,14 @@
+<mat-toolbar color="primary">
+    <button mat-button><mat-icon aria-hidden="false" aria-label="Example home icon">home</mat-icon>Home</button>
+    <button mat-button ><a routerLink="/contact" routerActiveLink="active">Contact Us</a></button>
+    <button mat-button ><a routerLink="/about" routerActiveLink="active">About Us</a></button>
+    <span class="example-spacer"></span>
+    <div *ngIf="abc">
+        <button mat-button ><a routerLink="/account" routerActiveLink="active">Account</a></button>
+        <button mat-button (click)="logout()">Logout</button>
+    </div>
+    <div *ngIf="!abc">
+        <button mat-button ><a routerLink="/login" routerActiveLink="active">Login</a></button>
+        <button mat-button ><a routerLink="/signup" routerActiveLink="active">Signup</a></button>
+    </div>
+</mat-toolbar>

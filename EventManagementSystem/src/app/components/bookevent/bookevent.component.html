@@ -1,0 +1,125 @@
+<app-header></app-header>
+<div>
+    <div class="mainform" *ngIf="hide1">
+        <h1>Book Your Event</h1>
+        <form [formGroup]="BookForm" #book="ngForm">
+            <div class="seperate">
+                <input matInput type="text" placeholder="Name" [disabled]="true" formControlName="username" required>
+            </div>
+            <div class="seperate">
+                <input matInput type="number" placeholder="BookingId" [disabled]="true" formControlName="BookingId" required>
+            </div>
+            <div class="seperate">
+                <input matInput type="number" placeholder="mobile number" formControlName="mobile" required>
+            </div>
+            <mat-form-field class="seperate">
+                <mat-label>Event Type</mat-label>
+                <mat-select formControlName="Event_Type">
+                    <mat-option *ngFor="let event of events" [value]="event">
+                        {{event}}
+                    </mat-option> 
+                </mat-select>
+            </mat-form-field>
+            <mat-form-field class="seperate">
+                <mat-label>Event Place</mat-label>
+                <mat-select formControlName="Event_Place">
+                    <mat-option *ngFor="let place of places" [value]="place">
+                        {{place}}
+                    </mat-option> 
+                </mat-select>
+            </mat-form-field>
+            <div class="seperate">
+                <input type="number" matInput formControlName="No_of_Guests" placeholder="No of Guests" required>
+            </div>
+            <div class="seperate">
+                <input matInput type="date" formControlName="Event_Date" required>
+            </div>
+            <mat-form-field class="seperate">
+                <mat-label>Equipements</mat-label>
+                <mat-select formControlName="Equipment">
+                    <mat-option *ngFor="let equipment of equipments" [value]="equipment">
+                        {{equipment}}
+                    </mat-option> 
+                </mat-select>
+            </mat-form-field>
+            <mat-form-field class="seperate">
+                <mat-label>Food</mat-label>
+                <mat-select formControlName="Food">
+                    <mat-option *ngFor="let food of foods" [value]="food">
+                        {{food}}
+                    </mat-option> 
+                </mat-select>
+            </mat-form-field>
+            <mat-form-field class="seperate">
+                <mat-label>Veg/Non-Veg</mat-label>
+                <mat-select formControlName="Food_type">
+                    <mat-option *ngFor="let foodtypes of foodtypes" [value]="foodtypes">
+                        {{foodtypes}}
+                    </mat-option> 
+                </mat-select>
+            </mat-form-field>
+            <div class="seperate">
+                <input matInput type="number" formControlName="Seats" placeholder="Number of seats" required> 
+            </div>
+            <div>
+                <button mat-button [disabled]="BookForm.invalid" (click)="submit()">Book</button>
+            </div>
+        </form>
+    </div>
+    <div class="mainform" *ngIf="hide2">
+        <table>
+            <tr>
+                <th>Username : </th>
+                <td>{{event.username}}</td>
+            </tr>
+            <tr>
+                <th>BookingId : </th>
+                <td>{{event.BookingId}}</td>
+            </tr>
+            <tr>
+                <th>Mobile number: </th>
+                <td>{{event.mobile}}</td>
+            </tr>
+            <tr>
+                <th>Event Type : </th>
+                <td>{{event.Event_Type}}</td>
+            </tr>
+            <tr>
+                <th>Event Place : </th>
+                <td>{{event.Event_Place}}</td>
+            </tr>
+            <tr>
+                <th>No of Guests: </th>
+                <td>{{event.No_of_Guests}}</td>
+            </tr>
+            <tr>
+                <th>Event Date: </th>
+                <td>{{event.Event_Date}}</td>
+            </tr>
+            <tr>
+                <th>Equipement: </th>
+                <td>{{event.Equipment}}</td>
+            </tr>
+            <tr>
+                <th>Food : </th>
+                <td>{{event.Food}}</td>
+            </tr>
+            <tr>
+                <th>Food Type: </th>
+                <td>{{event.Food_type}}</td>
+            </tr>
+            <tr>
+                <th>Seats: </th>
+                <td>{{event.Seats}}</td>
+            </tr>
+            <tr>
+                <th>Food : </th>
+                <td>{{event.Food}}</td>
+            </tr>
+            <tr>
+                <th>Price : </th>
+                <td>{{price}}</td>
+            </tr>
+        </table>
+    </div>
+</div>
